@@ -16,7 +16,7 @@ alias rmv="source $SCRIPT./remove.sh"
 
 The cdd command uses fzf to choose which directory to perform cd, so you don't need to type the whole directory everytime you wanna cd (or maybe not even type anything at all)
 
-<img src="https://github.com/4tila/FZF_tools/blob/main/imgs/output.gif" width="512" height="337" />
+<img src="https://github.com/4tila/FZF_tools/blob/main/imgs/cdd.gif" width="512" height="337" />
 
 ## open
 
