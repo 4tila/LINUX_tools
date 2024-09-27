@@ -26,6 +26,8 @@ It chooses the program to open based on file type from terminal.
 
 Deletes a folder or file with the fzf utility
 
+<img src="https://github.com/4tila/FZF_tools/blob/main/imgs/rmv.gif" width="512" height="337" />
+
 ## dates
 
 Calendar utility where you can add and remove important dates. It also prints how far or how close you are to each of those events
