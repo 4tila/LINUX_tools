@@ -33,11 +33,13 @@ Fuzzy-find a directory and change into it.
 
 ### `open`
 
-Fuzzy-find a file and open it.
+Fuzzy-find a file, open it and copies the command to clipboard
 
 * Defaults to `vim`, but can be customized to use other applications.
 * Handy for launching media files, documents, or code editors directly.
+* Also **copies the command used to open the file to the clipboard**, so you can easily reuse it without re-running `open`.
 
+> 🔧 For example, selecting `movie.mp4` will open it with `cvlc movie.mp4` and copy that command to your clipboard for later use. 
 > 🔧 Edit the script to configure default applications by filetype.
 
 ---
