@@ -47,7 +47,7 @@ Fuzzy-find a file and open it.
 Adjust screen brightness from the terminal.
 
 * Especially useful on desktops or environments like Linux Mint XFCE where brightness controls might be missing.
-* Can be modified to use `xrandr`, `brightnessctl`, or another backend.
+
 
 ---
 
