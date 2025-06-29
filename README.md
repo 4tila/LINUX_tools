@@ -39,7 +39,8 @@ Fuzzy-find a file, open it and copies the command to clipboard
 * Handy for launching media files, documents, or code editors directly.
 * Also **copies the command used to open the file to the clipboard**, so you can easily reuse it without re-running `open`.
 
-> 🔧 For example, selecting `movie.mp4` will open it with `cvlc movie.mp4` and copy that command to your clipboard for later use. 
+> 🔧 For example, selecting `movie.mp4` will open it with `cvlc movie.mp4` and copy that command to your clipboard for later use.
+
 > 🔧 Edit the script to configure default applications by filetype.
 
 ---
