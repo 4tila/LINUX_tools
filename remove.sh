@@ -1,6 +1,6 @@
 x=$(ls | fzf)
-read -r -p "Are you sure?[y/n]" response
-if [[ "$response" =~ ^([yY][eE][sS]|[yY])$ ]]
+read -q "confirm?Do you want to proceed? (y/n) "
+if [[ $confirm =~ ^([yY][eE][sS]|[yY])$ ]]
 then
     rm -rf "$x"
 fi
