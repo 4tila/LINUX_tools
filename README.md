@@ -1,6 +1,6 @@
 # Linux Tools
 
-A collection of productivity-boosting shell scripts that leverage the power of [`fzf`](https://github.com/junegunn/fzf), designed for quick access to files, directories, clipboard contents, and more.
+A collection of shell scripts that leverage [`fzf`](https://github.com/junegunn/fzf), which is designed for quick access to files, directories, clipboard contents, and more.
 
 You can turn them into custom commands by sourcing them in your `.bashrc` (or `.zshrc`) file:
 
