@@ -1,39 +1,84 @@
-# Linux tools
+# Linux Tools
 
-Set of algorithms that use the FZF linux utility. You can put those on bashrc as custom commands by appending the following to the file
+A collection of productivity-boosting shell scripts that leverage the power of [`fzf`](https://github.com/junegunn/fzf), designed for quick access to files, directories, clipboard contents, and more.
 
-```shell
-SCRIPT="~/LINNUX_tools/" # or wherever the script folder is gonna be located
-alias cdd="source $SCRIPT/cdd.sh"
-alias open="source $SCRIPT/open.sh"
-alias bright="source $SCRIPT/bright.sh"
-alias rmv="source $SCRIPT/remove.sh"
-alias copy="source $SCRIPT/copy.sh"
-alias hh="source $SCRIPT/hh.sh"
+You can turn them into custom commands by sourcing them in your `.bashrc` (or `.zshrc`) file:
+
+```bash
+SCRIPT="$HOME/LINUX_tools"  # Replace with the actual path to the script folder
+
+alias cdd="source \$SCRIPT/cdd.sh"
+alias open="source \$SCRIPT/open.sh"
+alias bright="source \$SCRIPT/bright.sh"
+alias rmv="source \$SCRIPT/remove.sh"
+alias copy="source \$SCRIPT/copy.sh"
+alias hh="source \$SCRIPT/hh.sh"
 ```
 
-## cdd
+> ⚠️ Make sure `fzf` and `xclip` (for clipboard usage) are installed on your system.
+> Change the `xclip -selection` command depending on your needs.
 
-Uses fzf to search for directories and does a cd to the chosen directory
+---
 
-## open
+## Available Commands
 
-Uses fzf to search for files and opens it with some precribed applications. If no application is given, then it uses vim to open it.
+### `cdd`
 
-Edit it to fit your needs
+Fuzzy-find a directory and change into it.
 
-## bright
+* Uses `fzf` to search through directories.
+* Great for quickly navigating large projects or nested folders.
 
-Application adjust screen brightness. I had to add it because in linux mint xfce there seems to be no button to adjust it
+---
 
-## rmv
+### `open`
 
-Uses fzf to select the file or folder to be removed
+Fuzzy-find a file and open it.
 
-## copy
+* Defaults to `vim`, but can be customized to use other applications.
+* Handy for launching media files, documents, or code editors directly.
 
-Given the filename of a textfile, it copies to clipboard the content inside it.
+> 🔧 Edit the script to configure default applications by filetype.
 
-## hh
+---
 
-Uses fzf to search for the history of commands and copies the command to clipboard, so that you don't need to do a "history | grep -E 'command' " and manually select the line and copy it.
+### `bright`
+
+Adjust screen brightness from the terminal.
+
+* Especially useful on desktops or environments like Linux Mint XFCE where brightness controls might be missing.
+* Can be modified to use `xrandr`, `brightnessctl`, or another backend.
+
+---
+
+### `rmv`
+
+Fuzzy-select files or folders and remove them safely.
+
+* Prevents mistakes by requiring an explicit selection via `fzf`.
+
+
+---
+
+### `copy`
+
+Copy the contents of a text file to the clipboard.
+
+* Useful when you want to paste configuration snippets, code, or text quickly.
+* Requires `xclip` or `wl-copy` depending on your desktop environment.
+
+---
+
+### `hh`
+
+Fuzzy-search your shell history and copy a command to the clipboard.
+
+* Faster alternative to `history | grep` followed by manually copying the line.
+* Useful for reusing long or complex commands without retyping.
+
+---
+
+## License
+
+MIT License – use, modify, and share freely.
+
