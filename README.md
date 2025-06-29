@@ -7,12 +7,12 @@ You can turn them into custom commands by sourcing them in your `.bashrc` (or `.
 ```bash
 SCRIPT="$HOME/LINUX_tools"  # Replace with the actual path to the script folder
 
-alias cdd="source \$SCRIPT/cdd.sh"
-alias open="source \$SCRIPT/open.sh"
-alias bright="source \$SCRIPT/bright.sh"
-alias rmv="source \$SCRIPT/remove.sh"
-alias copy="source \$SCRIPT/copy.sh"
-alias hh="source \$SCRIPT/hh.sh"
+alias cdd="source $SCRIPT/cdd.sh"
+alias open="source $SCRIPT/open.sh"
+alias bright="source $SCRIPT/bright.sh"
+alias rmv="source $SCRIPT/remove.sh"
+alias copy="source $SCRIPT/copy.sh"
+alias hh="source $SCRIPT/hh.sh"
 ```
 
 > ⚠️ Make sure `fzf` and `xclip` (for clipboard usage) are installed on your system.
