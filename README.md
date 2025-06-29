@@ -56,6 +56,7 @@ Adjust screen brightness from the terminal.
 Fuzzy-select files or folders and remove them safely.
 
 * Prevents mistakes by requiring an explicit selection via `fzf`.
+* Has an "Are you sure?" to not destroy files unintentionally
 
 
 ---
