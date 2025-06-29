@@ -65,7 +65,7 @@ Fuzzy-select files or folders and remove them safely.
 Copy the contents of a text file to the clipboard.
 
 * Useful when you want to paste configuration snippets, code, or text quickly.
-* Requires `xclip` or `wl-copy` depending on your desktop environment.
+* Requires `xclip` 
 
 ---
 
