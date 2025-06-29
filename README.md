@@ -1,14 +1,15 @@
-# FZF tools
+# Linux tools
 
 Set of algorithms that use the FZF linux utility. You can put those on bashrc as custom commands by appending the following to the file
 
 ```shell
-SCRIPT="~/FZF_tools/" # or wherever the script folder is gonna be located
-alias dates="python3 $SCRIPT./dates.py"
-alias cdd="source $SCRIPT./cdd.sh"
-alias open="source $SCRIPT./open.sh"
-alias rmv="source $SCRIPT./remove.sh"
-alias py="source $SCRIPT./py.sh"
+SCRIPT="~/LINNUX_tools/" # or wherever the script folder is gonna be located
+alias cdd="source $SCRIPT/cdd.sh"
+alias open="source $SCRIPT/open.sh"
+alias bright="source $SCRIPT/bright.sh"
+alias rmv="source $SCRIPT/remove.sh"
+alias copy="source $SCRIPT/copy.sh"
+alias hh="source $SCRIPT/hh.sh"
 ```
 
 
