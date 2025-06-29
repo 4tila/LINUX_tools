@@ -12,30 +12,28 @@ alias copy="source $SCRIPT/copy.sh"
 alias hh="source $SCRIPT/hh.sh"
 ```
 
-
-
 ## cdd
 
-The cdd command uses fzf to choose which directory to perform cd, so you don't need to type the whole directory everytime you wanna cd (or maybe not even type anything at all)
-
-<img src="https://github.com/4tila/FZF_tools/blob/main/imgs/cdd.gif" width="512" height="337" />
-
-## rmv
-
-Deletes a folder or file with the fzf utility
-
-<img src="https://github.com/4tila/FZF_tools/blob/main/imgs/rmv.gif" width="512" height="337" />
-
-## py
-
-selects a python program with fzf and then runs it
-
-<img src="https://github.com/4tila/FZF_tools/blob/main/imgs/py.gif" width="512" height="337" />
-
-## dates
-
-Calendar utility where you can add and remove important dates. It also prints how far or how close you are to each of those events
+Uses fzf to search for directories and does a cd to the chosen directory
 
 ## open
 
-It chooses the program to open based on file type from terminal. 
+Uses fzf to search for files and opens it with some precribed applications. If no application is given, then it uses vim to open it.
+
+Edit it to fit your needs
+
+## bright
+
+Application adjust screen brightness. I had to add it because in linux mint xfce there seems to be no button to adjust it
+
+## rmv
+
+Uses fzf to select the file or folder to be removed
+
+## copy
+
+Given the filename of a textfile, it copies to clipboard the content inside it.
+
+## hh
+
+Uses fzf to search for the history of commands and copies the command to clipboard, so that you don't need to do a "history | grep -E 'command' " and manually select the line and copy it.
