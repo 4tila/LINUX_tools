@@ -13,6 +13,7 @@ alias bright="source $SCRIPT/bright.sh"
 alias rmv="source $SCRIPT/remove.sh"
 alias copy="source $SCRIPT/copy.sh"
 alias hh="source $SCRIPT/hh.sh"
+alias backup="source $SCRIPT/backup.sh"
 ```
 
 > ⚠️ Make sure `fzf` and `xclip` (for clipboard usage) are installed on your system.
@@ -78,6 +79,12 @@ Fuzzy-search your shell history and copy a command to the clipboard.
 
 * Faster alternative to `history | grep` followed by manually copying the line.
 * Useful for reusing long or complex commands without retyping.
+
+---
+
+### `backup`
+
+Performs backups to sandisk of Desktop folder using rsync
 
 ---
 
