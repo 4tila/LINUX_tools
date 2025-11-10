@@ -4,4 +4,5 @@ if [ -z "$MOUNTPOINT" ] || [ -z "$LOCATION" ]; then
 	echo "Did not find sandisk to backup"
 	exit 1
 fi
-rsync -avh --progress ~/Desktop $MOUNTPOINT/rsync/
+#rsync -avh --progress ~/Desktop $MOUNTPOINT/rsync/
+rsync -av --partial --append --progress --log-file=$HOME/rsync.log ~/Desktop $MOUNTPOINT/rsync/ # avn for dry-run
