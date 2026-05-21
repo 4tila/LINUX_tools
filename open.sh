@@ -1,10 +1,7 @@
 #!/usr/bin/env zsh
 
-## Open's the file and also adds the command to open the file to clipboard
-## so that you just paste the command to terminal (shift+insert for me) in case
-## you need to do it again
-
-IN=$(ls | fzf) || exit 1  # Exit if user cancels fzf
+#IN=$(ls | fzf) || exit 1  # Exit if user cancels fzf
+IN=$(ls | fzf --preview 'head -c 10000 {} | batcat --color=always --paging=never' ) || exit 1  # Exit if user cancels fzf
 
 if [[ -z "$IN" ]]; then
     exit 1
@@ -21,7 +18,7 @@ case "$ext" in
         typora "$IN"
         echo -n "typora \"$IN\"" | xclip -selection primary
         ;;
-    bmp|pdf|djvu|jpg|png|jpeg|cbz|cbr|eps) 
+    bmp|pdf|djvu|jpg|png|jpeg|cbz|cbr|eps|gif) 
         xdg-open "$IN"
         echo -n "xdg-open \"$IN\"" | xclip -selection primary
         ;;
@@ -41,13 +38,17 @@ case "$ext" in
         lyx "$IN"
         echo -n "lyx \"$IN\"" | xclip -selection primary
         ;;
+    m4a) 
+        mpv "$IN"
+        echo -n "mpv \"$IN\"" | xclip -selection primary
+        ;;
     mp4|mp3|mkv) 
         cvlc "$IN"
         echo -n "cvlc \"$IN\"" | xclip -selection primary
         ;;
-    py)
-        python3 "$IN"
-        echo -n "python3 \"$IN\"" | xclip -selection primary
+    html) 
+        xdg-open "$IN"
+        echo -n "xdg-open \"$IN\"" | xclip -selection primary
         ;;
     *) 
         vim "$IN"
